@@ -7,26 +7,26 @@
 
 body{
 font-family: Arial;
-background-color:#f2f2f2;
+background-color:#7083ff;
 }
 
 form{
-width:500px;
+width: 700px;
 margin:auto;
-background:white;
+background:rgb(255, 255, 255);
 padding:20px;
-border-radius:5px;
+border: radius 5px;px;
 }
 
 fieldset{
-border:2px solid blue;
+border:2px solid rgba(0, 34, 255, 0.212);
 margin-bottom:15px;
 padding:10px;
 }
 
 legend{
 font-weight:bold;
-color:blue;
+color:rgba(0, 0, 0,);
 }
 
 label{
@@ -102,27 +102,27 @@ function validateForm(){
 
 <fieldset>
 
-<legend>Personal Information</legend>
+<legend> ⁌ PERSONAL INFORMATION ⁍ </legend>
 
-<label for="fullname">Full Name</label>
+<label for="fullname"><strong>Full Name</strong></label>
 <input type="text" id="fullname" name="fullname" required>
 
-<label for="email">Email Address</label>
+<label for="email"><strong>Email Address</strong></label>
 <input type="email" id="email" name="email" required>
 
-<label for="telephone">Telephone</label>
+<label for="telephone"><strong>Telephone</strong></label>
 <input type="tel" id="telephone" name="telephone" required>
 
-<label for="address">Physical Address</label>
+<label for="address"><strong>Physical Address</strong></label>
 <input type="text" id="address" name="address" required>
 
 </fieldset>
 
 <fieldset>
 
-<legend>Position Information</legend>
+<legend> ⁌ POSITION INFORMATION ⁍ </legend>
 
-<label for="jobtitle">Desired Job Title</label>
+<label for="jobtitle"><strong>Desired Job Title</strong></label>
 
 <select id="jobtitle" name="jobtitle" required>
 <option value="">Select an option</option>
@@ -135,39 +135,39 @@ function validateForm(){
 
 <br><br>
 
-Employment Type:<br>
+<strong>Employment Type:</strong><br>
 
-<input type="radio" id="parttimecontract" name="employment" value="Part-time contract" required> <label for="parttimecontract">Part-time contract</label><br>
-<input type="radio" id="parttimepermanent" name="employment" value="Part-time permanent"> <label for="parttimepermanent">Part-time permanent</label><br>
-<input type="radio" id="fulltimecontract" name="employment" value="Full-time contract"> <label for="fulltimecontract">Full-time contract</label><br>
-<input type="radio" id="fulltimepermanent" name="employment" value="Full-time permanent"> <label for="fulltimepermanent">Full-time permanent</label><br>
-
-</fieldset>
-
-<fieldset>
-
-<legend>Areas of Interest</legend>
-
-<input type="checkbox" id="interest1" name="interests" value="Account Executive"> <label for="interest1">Account Executive</label><br>
-<input type="checkbox" id="interest2" name="interests" value="Business Development"> <label for="interest2">Business Development</label><br>
-<input type="checkbox" id="interest3" name="interests" value="Inside Sales"> <label for="interest3">Inside Sales</label><br>
-<input type="checkbox" id="interest4" name="interests" value="Sales Manager"> <label for="interest4">Sales Manager</label><br>
-<input type="checkbox" id="interest5" name="interests" value="VP Sales"> <label for="interest5">VP Sales</label><br>
+<input type="radio" id="parttimecontract" name="employment" value="Part-time contract" required> <label for="parttimecontract">☸ Part-time contract</label><br>
+<input type="radio" id="parttimepermanent" name="employment" value="Part-time permanent"> <label for="parttimepermanent">☸ Part-time permanent</label><br>
+<input type="radio" id="fulltimecontract" name="employment" value="Full-time contract"> <label for="fulltimecontract">☸ Full-time contract</label><br>
+<input type="radio" id="fulltimepermanent" name="employment" value="Full-time permanent"> <label for="fulltimepermanent">☸ Full-time permanent</label><br>
 
 </fieldset>
 
 <fieldset>
 
-<legend>Relocation</legend>
+<legend> ⁌ AREAS OF INTEREST ⁍ </legend>
 
-<input type="radio" id="relocateyes" name="relocate" value="Yes" required> <label for="relocateyes">Yes</label><br>
-<input type="radio" id="relocaten" name="relocate" value="No"> <label for="relocaten">No</label><br>
+<input type="checkbox" id="interest1" name="interests" value="Account Executive"> <label for="interest1">☸ Account Executive</label><br>
+<input type="checkbox" id="interest2" name="interests" value="Business Development"> <label for="interest2">☸ Business Development</label><br>
+<input type="checkbox" id="interest3" name="interests" value="Inside Sales"> <label for="interest3">☸ Inside Sales</label><br>
+<input type="checkbox" id="interest4" name="interests" value="Sales Manager"> <label for="interest4">☸ Sales Manager</label><br>
+<input type="checkbox" id="interest5" name="interests" value="VP Sales"> <label for="interest5">☸ VP Sales</label><br>
 
 </fieldset>
 
 <fieldset>
 
-<legend>Additional Message</legend>
+<legend> ⁌ RELOCATION ⁍ </legend>
+
+<input type="radio" id="relocateyes" name="relocate" value="Yes" required> <label for="relocateyes">☸ Yes</label><br>
+<input type="radio" id="relocaten" name="relocate" value="No"> <label for="relocaten">☸ No</label><br>
+
+</fieldset>
+
+<fieldset>
+
+<legend> ⁌ ADDITIONAL MESSAGE ⁍ </legend>
 
 <textarea id="message" name="message" rows="4"></textarea>
 
