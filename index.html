@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Job Application Form</title>
+
+<style>
+
+body{
+font-family: Arial;
+background-color:#f2f2f2;
+}
+
+form{
+width:500px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:5px;
+}
+
+fieldset{
+border:2px solid blue;
+margin-bottom:15px;
+padding:10px;
+}
+
+legend{
+font-weight:bold;
+color:blue;
+}
+
+label{
+display:block;
+margin-top:10px;
+}
+
+input, select, textarea{
+width:100%;
+padding:8px;
+margin-top:5px;
+}
+
+button{
+margin-top:10px;
+padding:10px;
+}
+
+</style>
+
+<script>
+
+function validateForm(){
+    let name = document.forms["jobForm"]["fullname"].value;
+    let email = document.forms["jobForm"]["email"].value;
+    let telephone = document.forms["jobForm"]["telephone"].value;
+    let address = document.forms["jobForm"]["address"].value;
+    let jobTitle = document.forms["jobForm"]["jobtitle"].value;
+    let employment = document.querySelector('input[name="employment"]:checked');
+    let relocate = document.querySelector('input[name="relocate"]:checked');
+
+    if(name == ""){
+        alert("Full name must be filled out");
+        return false;
+    }
+    if(email == "" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        alert("Valid email address is required");
+        return false;
+    }
+    if(telephone == "" || !/^\d{10,}$/.test(telephone.replace(/\D/g, ''))){
+        alert("Valid telephone number is required (at least 10 digits)");
+        return false;
+    }
+    if(address == ""){
+        alert("Physical address must be filled out");
+        return false;
+    }
+    if(jobTitle == ""){
+        alert("Desired job title must be selected");
+        return false;
+    }
+    if(!employment){
+        alert("Employment type must be selected");
+        return false;
+    }
+    if(!relocate){
+        alert("Relocation preference must be selected");
+        return false;
+    }
+    // Additional message is optional
+    return true;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2 align="center">Job Application Form</h2>
+
+<form name="jobForm" onsubmit="return validateForm()">
+
+<fieldset>
+
+<legend>Personal Information</legend>
+
+<label for="fullname">Full Name</label>
+<input type="text" id="fullname" name="fullname" required>
+
+<label for="email">Email Address</label>
+<input type="email" id="email" name="email" required>
+
+<label for="telephone">Telephone</label>
+<input type="tel" id="telephone" name="telephone" required>
+
+<label for="address">Physical Address</label>
+<input type="text" id="address" name="address" required>
+
+</fieldset>
+
+<fieldset>
+
+<legend>Position Information</legend>
+
+<label for="jobtitle">Desired Job Title</label>
+
+<select id="jobtitle" name="jobtitle" required>
+<option value="">Select an option</option>
+<option value="Account Executive">Account Executive</option>
+<option value="Business Development">Business Development</option>
+<option value="Inside Sales">Inside Sales</option>
+<option value="Sales Manager">Sales Manager</option>
+<option value="VP Sales">VP Sales</option>
+</select>
+
+<br><br>
+
+Employment Type:<br>
+
+<input type="radio" id="parttimecontract" name="employment" value="Part-time contract" required> <label for="parttimecontract">Part-time contract</label><br>
+<input type="radio" id="parttimepermanent" name="employment" value="Part-time permanent"> <label for="parttimepermanent">Part-time permanent</label><br>
+<input type="radio" id="fulltimecontract" name="employment" value="Full-time contract"> <label for="fulltimecontract">Full-time contract</label><br>
+<input type="radio" id="fulltimepermanent" name="employment" value="Full-time permanent"> <label for="fulltimepermanent">Full-time permanent</label><br>
+
+</fieldset>
+
+<fieldset>
+
+<legend>Areas of Interest</legend>
+
+<input type="checkbox" id="interest1" name="interests" value="Account Executive"> <label for="interest1">Account Executive</label><br>
+<input type="checkbox" id="interest2" name="interests" value="Business Development"> <label for="interest2">Business Development</label><br>
+<input type="checkbox" id="interest3" name="interests" value="Inside Sales"> <label for="interest3">Inside Sales</label><br>
+<input type="checkbox" id="interest4" name="interests" value="Sales Manager"> <label for="interest4">Sales Manager</label><br>
+<input type="checkbox" id="interest5" name="interests" value="VP Sales"> <label for="interest5">VP Sales</label><br>
+
+</fieldset>
+
+<fieldset>
+
+<legend>Relocation</legend>
+
+<input type="radio" id="relocateyes" name="relocate" value="Yes" required> <label for="relocateyes">Yes</label><br>
+<input type="radio" id="relocaten" name="relocate" value="No"> <label for="relocaten">No</label><br>
+
+</fieldset>
+
+<fieldset>
+
+<legend>Additional Message</legend>
+
+<textarea id="message" name="message" rows="4"></textarea>
+
+</fieldset>
+
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+
+</form>
+
+</body>
+</html>
