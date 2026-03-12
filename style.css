@@ -6,58 +6,54 @@ background-image: url("https://i.pinimg.com/736x/4b/fd/7d/4bfd7d496ddbdf4151068e
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
-background-attachment: fixed;
 }
 
 
-/* Form container */
+/* Glassmorphism form */
 
-form{
-max-width:700px;
-margin:auto;
-background:rgba(255,255,255,0.9);
-padding:25px;
-border-radius:10px;
-box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+.glass-form{
+
+width: 600px;
+padding: 40px;
+
+background: rgba(255,255,255,0.2);
+
+border-radius: 15px;
+
+backdrop-filter: blur(10px);
+
+box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+
+color: white;
+
 }
 
 
-/* Headings */
+/* Inputs */
+
+.form-control,
+.form-select{
+
+background: rgba(255,255,255,0.8);
+
+border: none;
+
+}
+
+
+/* Labels */
+
+label{
+font-weight: bold;
+}
+
+
+/* Title */
 
 h2{
-color:white;
-font-weight:bold;
+font-weight: bold;
 }
+</div>
 
-
-/* Fieldsets */
-
-fieldset{
-border:2px solid rgba(0,0,0,0.2);
-padding:15px;
-margin-bottom:15px;
-border-radius:5px;
-}
-
-
-/* Legends */
-
-legend{
-font-weight:bold;
-padding:0 10px;
-}
-
-
-/* Buttons */
-
-button{
-margin-top:10px;
-padding:10px 15px;
-}
-
-
-/* Improve spacing */
-
-.form-check{
-margin-top:5px;
-}
+</body>
+</html>
