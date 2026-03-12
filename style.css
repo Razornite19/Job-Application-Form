@@ -1,0 +1,63 @@
+/* Page background */
+
+body{
+font-family: Arial, sans-serif;
+background-image: url("background.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+
+/* Form container */
+
+form{
+max-width:700px;
+margin:auto;
+background:rgba(255,255,255,0.9);
+padding:25px;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+
+
+/* Headings */
+
+h2{
+color:white;
+font-weight:bold;
+}
+
+
+/* Fieldsets */
+
+fieldset{
+border:2px solid rgba(0,0,0,0.2);
+padding:15px;
+margin-bottom:15px;
+border-radius:5px;
+}
+
+
+/* Legends */
+
+legend{
+font-weight:bold;
+padding:0 10px;
+}
+
+
+/* Buttons */
+
+button{
+margin-top:10px;
+padding:10px 15px;
+}
+
+
+/* Improve spacing */
+
+.form-check{
+margin-top:5px;
+}
